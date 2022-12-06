@@ -1,0 +1,10 @@
+default: days2all
+
+days2all.o: days2all.c
+	gcc -c days2all.c -o days2all.o
+
+days2all: days2all.o
+	gcc days2all.o -o days2all
+
+clean:
+	-rm -f days2all.o2all.c -o days2all.o

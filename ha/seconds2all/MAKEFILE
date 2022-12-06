@@ -1,0 +1,10 @@
+default: seconds2all
+
+seconds2all.o: seconds2all.c
+	gcc -c seconds2all.c -o seconds2all.o
+
+seconds2all: seconds2all.o
+	gcc seconds2all.o -o seconds2all
+
+clean:
+	-rm -f seconds2all.o

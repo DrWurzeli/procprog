@@ -1,0 +1,10 @@
+default: pi
+
+pi.o: pi.c
+	gcc -c pi.c -o pi.o
+
+pi: pi.o
+	gcc pi.o -o pi
+
+clean:
+	-rm -f pi.o

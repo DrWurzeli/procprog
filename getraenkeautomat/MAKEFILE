@@ -1,0 +1,10 @@
+default: gautomat
+
+gautomat.o: gautomat.c
+	gcc -c gautomat.c -o gautomat.o
+
+gautomat: gautomat.o
+	gcc gautomat.o -o gautomat 
+
+clean:
+	-rm -f gautomat.c -o gautomat.o
