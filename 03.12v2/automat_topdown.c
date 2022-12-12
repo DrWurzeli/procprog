@@ -1,102 +1,117 @@
-//Getraenkeautomat strukturiert
+//Getraenkeautomat func
 #include <stdio.h>
-#define VERSION "2.0.3"
+#define VERSION "2.0.4"
 #define ITEM_AMOUNT 3
 
 struct items {
-	int nummer;
+	int number;
 	char name[10];
-	float preis;
+	float price;
 };
 typedef struct items item;
 
-void startup_sequenz(){
+void startup_sequence(){
 	printf("\n");
-	printf("Starte Automaten...\n");
-	printf("Getraenkeautomat Version: " VERSION ".\n");
-	printf("Beep Boop. Start erfolgreich!\n\n");
+	printf("_________________________________\n");
+	printf("|				|\n");
+	printf("|   :#:	   			|\n");
+	printf("|   : :	   Loading...		|\n");
+	printf("|   : :	   Automat bereit.	|\n");
+	printf("| .'   '.  Willkommen!		|\n");
+	printf("| :_____:			|\n");
+	printf("| |     |			|\n");
+	printf("| |  V  |  Getraenke Automat.	|\n");
+	printf("| |  2  |  Version " VERSION "	|\n");
+	printf("| |     |			|\n");
+	printf("| |_____|			|\n");
+	printf("|_______________________________|\n");
 }
 
-void printbalance(float guthaben_aktuell){
-	printf("\nSie haben aktuell %.2f EUR.\n", guthaben_aktuell);
+void balance_print(float balance_current){
+	printf("\nSie haben aktuell %.2f EUR.\n", balance_current);
 }
 
-void listitems(item items[ITEM_AMOUNT]){
-	printf("Wir haben im Angebot: \n");
+void item_list(item items[ITEM_AMOUNT]){
+	printf("\nWir haben im Angebot: \n");
 	printf("Nummer\tPreis\t\tName:\n");
 	for(int i = 0; i < ITEM_AMOUNT; i++ )
 		{
-			printf("%d\t%.2f EUR\t%s\n", items[i].nummer, items[i].preis, items[i].name);
+			printf("%d\t%.2f EUR\t%s\n", items[i].number, items[i].price, items[i].name);
 		}
 }
 
-float item_auswahl(item items[ITEM_AMOUNT]){
-	int eingabe;
-	float preis;
+float item_select(item items[ITEM_AMOUNT]){
+	int input;
+	float price;
 	printf("\nAuswahlmodus:\n");
 	printf("Bitte geben Sie die Nummer des gewuenschten Items ein: ");
-	scanf("%d", &eingabe);
-	eingabe -= 1;
+	scanf("%d", &input);
+	input -= 1;
 
-	if (eingabe >= 0 && eingabe < ITEM_AMOUNT)	{
-		preis = items[eingabe].preis;
-		printf("Sie haben %s ausgesucht.\n", items[eingabe].name);
+	if (input >= 0 && input < ITEM_AMOUNT)	{
+		price = items[input].price;
+		printf("Sie haben %s ausgesucht.\n", items[input].name);
 	}
 	else{
 		printf("Dieser Slot ist nicht belegt.\n");
 		printf("Wir nehmen einfach mal Wasser.\n");
-		preis = 0.5;
-		//loopen nach oben statt wasser
+		price = 0.5;
+		//feedback loop
 	}
 	
-	printf("Ihre Erfrischung kostet Sie %.2f EUR.\n", preis);
-	return preis;
+	printf("Ihre Erfrischung kostet Sie %.2f EUR.\n", price);
+	return price;
 }
 
-float geld_einwurf(float guthaben){
-	float einwurf;
-	float guthaben_neu;
+float balance_topup(){
+	float input;
+	float balance_increment = 0;
 	
 	printf("\nZahlungsmodus:\n");
 	printf("Bitte Geldmuenze einwerfen.\n");
-	//printf("Akzeptiert werden 1, 2 und 0.5 EUR.\n");
+	printf("Akzeptiert werden 1, 2 und 0.5 EUR.\n");
 	printf("Einwurf: ");
-	scanf("%f", &einwurf);
+	scanf("%f", &input);
+	
+	(input < 0) ? (printf("Invalide Eingabe.\n")) :\
+	(input != 2.0f && input != 1.0f && input != 0.5f) ?\
+	(printf("Wird nicht angenommen.\n")) \
+	: (balance_increment = input);
+	//feedback loop?
 
-	(einwurf < 0) ? (printf("Fehler.\n")) : (guthaben_neu = guthaben + einwurf);
-
-	return guthaben_neu;
+	return balance_increment;
 }
 
-void ausreichend_geld(float guthaben, float kosten){
+//return type int zum testen
+void balance_check(float balance, float cost){
 	printf("\n");
-	(guthaben >= kosten) ?\
-	printf("Guthaben ausreichend.\nBitte entnehmen Sie Ihre Erfrischung.\nWechselgeld nicht vergessen.\n") \
-	: printf("Gebe Restgeld aus, versuchs nochmal.\n");
-	//return int0/1 zum testen
+	(balance >= cost) ?\
+	printf("Guthaben ausreichend.\nBitte entnehmen Sie Ihre Erfrischung.\n") \
+	: printf("Zahlungsfehler. Vorgang abgebrochen.\n");
+	(balance > cost) && (printf("Wechselgeld nicht vergessen.\n")); //replace with topup loop
 	//wechselgeld berechnen
 }
 
 void main() {
 //init
-	float guthaben = 0;
-	float kosten = 0;
+	float balance = 0;
+	float cost = 0;
 
-	item arr_items[ITEM_AMOUNT] = {
+	item items_arr[ITEM_AMOUNT] = {
 		{1, "Wasser", 0.5},
 		{2, "Limonade", 1.00},
 		{3, "Bier", 2.00}
 	};	
 
 //run
-	startup_sequenz();
-	listitems(arr_items);
+	startup_sequence();
+	item_list(items_arr);
 	
-	//input detect?
-	kosten = item_auswahl(arr_items);
-	printbalance(guthaben);
-	guthaben = geld_einwurf(guthaben);
+	//loop start
+	cost = item_select(items_arr);
+	balance_print(balance);
+	balance += balance_topup();
 
-	ausreichend_geld(guthaben, kosten);
-	//loop on feedback from ^^
+	balance_check(balance, cost);
+	//loop end
 }
