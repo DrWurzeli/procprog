@@ -1,4 +1,4 @@
-//Getraenkeautomat
+//Getraenkeautomat strukturiert
 #include <stdio.h>
 #define VERSION "2.0.3"
 #define ITEM_AMOUNT 3
