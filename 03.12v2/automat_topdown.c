@@ -113,5 +113,6 @@ void main() {
 	balance += balance_topup();
 
 	balance_check(balance, cost);
+	printf("\n");
 	//loop end
 }
