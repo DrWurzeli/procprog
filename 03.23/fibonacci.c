@@ -10,6 +10,7 @@ int main(){
     printf("Bitte die Anzahl von Fibonnaci Zahlen/Folgen eingeben: ");
     scanf("%d", &n);
 
+    printf("F(%d) ist:", n);
     while (n >= 0)
     {
         fib = fib1 + fib2;
