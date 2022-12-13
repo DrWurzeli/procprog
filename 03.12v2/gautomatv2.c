@@ -18,7 +18,7 @@ int main() {
 		case 1: printf("Sie haben sich fuer Wasser entschieden.\nBitte werfen Sie 0.5 EUR ein.\n"); kosten += 0.5;  break;
 		case 2: printf("Sie haben sich fuer Limonade entschieden.\nBitte werfen Sie 1 EUR ein.\n"); kosten += 1; break;
 		case 3: printf("Sie haben sich fuer Bier entschieden.\nBitte werfen Sie 2 EUR ein.\n"); kosten += 2; break;
-		default: printf("Das haben wir leider nicht im Angebot, versuchen Sie das nochmal"); kosten+= auswahl; return 0;
+		default: printf("Das haben wir leider nicht im Angebot, versuchen Sie das nochmal"); return 0;
 	}
 
 	printf("Einwurf: ");
