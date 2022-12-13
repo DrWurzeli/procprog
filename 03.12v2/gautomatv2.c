@@ -4,7 +4,7 @@
 
 int main() {
 
-	int einwurf, auswahl;
+	int auswahl;
 	float kosten = 0;
 	float guthaben = 0;
 
@@ -22,8 +22,7 @@ int main() {
 	}
 
 	printf("Einwurf: ");
-	scanf("%d", &einwurf);
-	guthaben += einwurf;
+	scanf("%f", &guthaben);
 	//printf("Dein Guthaben betraegt %d Euro.\n", guthaben);
 
 	( kosten <= guthaben ) ? printf("Hier ist ihr Getraenk! Wechselgeld nicht vergessen.\n") : printf("Das war nicht genug Geld, gebe Restgeld aus...\n");	
