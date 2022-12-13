@@ -11,11 +11,12 @@ int main(){
     printf("F(%d) ist:", n);
     while (n >= 0)
     {
+        //printf("(fibinc%d fibex%d)", fibinc, fibex);
         fib = fibinc + fibex;
         fibinc = fibex;
         fibex = fib;
-        printf("(%d %d)", fibinc, fibex);
         printf(" %d", fib);
+        //printf("(fibinc%d fibex%d)", fibinc, fibex);
         n --;
         fibsum += fib;
     }
