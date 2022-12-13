@@ -6,7 +6,7 @@ int main(){
 
     i = fac = 1;
 
-    printf("Fakultaet von n! finden.\nGib eine Zahl fuer n ein: ");
+    printf("Fakultaet n! berechnen.\nGib eine Zahl fuer n ein: ");
     scanf("%d", &n);
 
     while (i <= n)
