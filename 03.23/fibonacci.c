@@ -1,4 +1,5 @@
 #include <stdio.h>
+//F(n)=F(n-1) +F(n-2), non-recursive
 
 int main(){
 
