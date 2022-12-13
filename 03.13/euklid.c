@@ -9,18 +9,10 @@ int main(){
 
     while (x != y)
     {
-        if ( x > y)
-        {
-            x -= y;
-        }
-        else
-        {
-            y -= x;
-        }
-
+        (x > y) ? (x -= y) : (y -= x);
     }
 
-    printf("%d ist der ggT.", x);
+    printf("%d ist der ggT.\n", x);
 
     return 0;
 }
