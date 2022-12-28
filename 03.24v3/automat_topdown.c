@@ -52,7 +52,7 @@ int item_select(item items[ITEM_AMOUNT]){
 		printf("Bitte geben Sie die Nummer des gewuenschten Artikels ein: ");
 
 		if(scanf("%d", &input) != 1){
-            scanf("%*[^\n]");
+			scanf("%*[^\n]");
 			printf("Invalide Eingabe.\n");
 			input = -1;
 			continue;
@@ -80,7 +80,7 @@ int item_amount(){
 		printf("\nBitte geben Sie die Anzahl der gewuenschten Artikel ein: ");
 
 		if(scanf("%d", &amount) != 1){
-            scanf("%*[^\n]");
+			scanf("%*[^\n]");
 			printf("Invalide Eingabe.\n");
 			amount = -1;
 			continue;
@@ -102,7 +102,7 @@ float balance_topup(){
 	printf("Einwurf: ");
 		
 	if((scanf("%f", &input)) != 1){
-    	scanf("%*[^\n]");
+		scanf("%*[^\n]");
 		input = -1;
 		}
 
