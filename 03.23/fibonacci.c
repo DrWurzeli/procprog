@@ -3,7 +3,7 @@
 
 int main(){
 
-    int n = 0, fib = 0, fibinc = -1, fibex = 1, fibsum = 0;
+    int n = 0, fib = 0, fibinc = -1, fibex = 1;// fibsum = 0;
 
     printf("Bitte die Anzahl von Fibonnaci Zahlen/Folgen eingeben: ");
     scanf("%d", &n);
@@ -18,8 +18,9 @@ int main(){
         printf(" %d", fib);
         //printf("(fibinc%d fibex%d)", fibinc, fibex);
         n --;
-        fibsum += fib;
+        //fibsum += fib;
     }
-    printf("\nSumme: %d\n", fibsum);
+//    printf("\nSumme: %d\n", fibsum);
+	printf("\n");
     return 0;
 }
