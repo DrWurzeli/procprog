@@ -1,14 +1,14 @@
-//Getraenkeautomat func
+//Getraenkeautomat 2.03.24 looping + func
 #include <stdio.h>
 #define VERSION "2.03.24"
 #define ITEM_AMOUNT 3
 
-struct items {
+struct items_t {
 	int number;
 	char name[10];
 	float price;
 };
-typedef struct items item;
+typedef struct items_t item;
 
 void startup_sequence(){
 	printf("\n");
@@ -45,23 +45,24 @@ void item_list(item items[ITEM_AMOUNT]){
 }
 
 int item_select(item items[ITEM_AMOUNT]){
-	int input;
+	int input = -1;
 
-	printf("\nAuswahlmodus:\n");
-	printf("Bitte geben Sie die Nummer des gewuenschten Artikels ein: ");
-	scanf("%d", &input);
-	input -= 1;
+	do {
+		printf("\nAuswahlmodus:\n");
+		printf("Bitte geben Sie die Nummer des gewuenschten Artikels ein: ");
 
-	if (input >= 0 && input < ITEM_AMOUNT)
-	{
-		printf("Sie haben %s ausgesucht.\n", items[input].name);
-	}
-	else
-	{
-		printf("Dieser Slot ist nicht belegt.\nStandarartikel ausgesucht: Wasser.\n");
-		input = 0;
-	}
+		if(scanf("%d", &input) != 1){
+            scanf("%*[^\n]");
+			printf("Invalide Eingabe.\n");
+			input = -1;
+			continue;
+		}
+		
+		input -= 1;
+		if (!(input >= 00 && input < ITEM_AMOUNT)) printf("Dieser Slot ist nicht belegt.\n");			
+	} while (!(input >= 00 && input < ITEM_AMOUNT));
 
+	printf("Sie haben %s ausgesucht.\n", items[input].name);
 	return input;
 }
 
@@ -73,34 +74,41 @@ float item_cost(item items[ITEM_AMOUNT], int selection){
 }
 
 int item_amount(){
-	int amount;
+	int amount = -1;
 
-	printf("\nBitte geben Sie die Anzahl der gewuenschten Artikels ein: ");
-	scanf("%d", &amount);
-	
-	if (amount < 1)
-	{
-		amount = 1;
-		printf("Du musst mindestens 1x den Artikel kaufen.\n Wähle 1x aus.");
-	}
+	do{
+		printf("\nBitte geben Sie die Anzahl der gewuenschten Artikel ein: ");
+
+		if(scanf("%d", &amount) != 1){
+            scanf("%*[^\n]");
+			printf("Invalide Eingabe.\n");
+			amount = -1;
+			continue;
+		}
+
+		if (amount < 1) printf("Der Artikel muss mindestens 1x gekauft werden.\n");
+	} while (amount < 1);
 
 	return amount;
 }
 
 float balance_topup(){
-	float input;
+	float input = -1;
 	float balance_increment = 0;
 	
 	printf("\nZahlungsmodus:\n");
 	printf("Bitte Geldmuenze einwerfen.\n");
 	printf("Akzeptiert werden 1, 2 und 0.5 EUR.\n");
 	printf("Einwurf: ");
-	scanf("%f", &input);
-	
-	(input < 0) ? (printf("Invalide Eingabe.\n")) :\
-	(input != 2.0f && input != 1.0f && input != 0.5f) ?\
-	(printf("Wird nicht angenommen.\n")) \
-	: (balance_increment = input);
+		
+	if((scanf("%f", &input)) != 1){
+    	scanf("%*[^\n]");
+		input = -1;
+		}
+
+	if (input < 0) printf("Invalide Eingabe.\n");
+	else if (input != 2.0f && input != 1.0f && input != 0.5f) printf("Wird nicht angenommen.\n");
+	else balance_increment = input;
 
 	return balance_increment;
 }
@@ -108,13 +116,12 @@ float balance_topup(){
 void balance_check(float cost){
 	float balance = 0;
 
-	cost_print(cost);
-
-	while (balance < cost)
-	{
+	do{
+		cost_print(cost);
 		balance_print(balance);
 		balance += balance_topup();
-	}
+	} while (balance < cost);
+
 	printf("\nGuthaben ausreichend. Ausgabe erfolgt.\n");
 	(balance > cost) && (printf("Wechselgeld nicht vergessen.\n"));
 }
@@ -127,7 +134,6 @@ void items_out(int amount){
 }
 
 void main() {
-//init
 	float cost = 0;
 	int amount = 0;
 	int selection = 0;
@@ -138,7 +144,6 @@ void main() {
 		{3, "Bier", 2.00}
 	};	
 
-//run
 	startup_sequence();
 	item_list(items_arr);
 	
