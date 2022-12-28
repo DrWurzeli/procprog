@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define ANZAHL 10
 
-void arr_print(int arr[ANZAHL]){
+void arr_print(int *arr){
 
     printf("Array: \n");
     for(int i=0; i < ANZAHL; i++){
@@ -10,7 +10,7 @@ void arr_print(int arr[ANZAHL]){
     printf("\n");
 }
 
-int arr_bubblesort(int arr[ANZAHL]){
+int arr_bubblesort(int *arr){
 
     for(int i = 1; i < ANZAHL; i++){
         for(int j = 0; j < ANZAHL-i; j++){
@@ -22,14 +22,13 @@ int arr_bubblesort(int arr[ANZAHL]){
             }
         }
     }    
-    return arr[ANZAHL];
 }
 
 void main(){
 
-    int zahlen_arr[ANZAHL] = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+    int zahlen_arr[ANZAHL] = {-150, -233, 4748, -305, -1, 2808, -3574, 431, -23, 0};
 
     arr_print(zahlen_arr);
-    zahlen_arr[ANZAHL] = arr_bubblesort(zahlen_arr);
+    arr_bubblesort(zahlen_arr);
     arr_print(zahlen_arr);
 }

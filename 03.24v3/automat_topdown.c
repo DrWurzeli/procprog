@@ -10,6 +10,8 @@ struct items_t {
 };
 typedef struct items_t item;
 
+//helper
+
 void startup_sequence(){
 	printf("\n");
 	printf("_________________________________\n");
@@ -35,7 +37,7 @@ void cost_print(float cost){
 	printf("\nIhre aktuelle Auswahl kostet Sie: %.2f EUR.\n", cost);
 }
 
-void item_list(item items[ITEM_AMOUNT]){
+void item_list(item *items){
 	printf("\nWir haben im Angebot: \n");
 	printf("Nummer\tPreis\t\tName:\n");
 	for(int i = 0; i < ITEM_AMOUNT; i++ )
@@ -44,7 +46,9 @@ void item_list(item items[ITEM_AMOUNT]){
 		}
 }
 
-int item_select(item items[ITEM_AMOUNT]){
+//automat func
+//e
+int item_select(item *items){
 	int input = -1;
 
 	do {
@@ -64,13 +68,6 @@ int item_select(item items[ITEM_AMOUNT]){
 
 	printf("Sie haben %s ausgesucht.\n", items[input].name);
 	return input;
-}
-
-float item_cost(item items[ITEM_AMOUNT], int selection){
-	float price;
-	price = items[selection].price;	
-	//printf("Ihre Erfrischung kostet Sie %.2f EUR.\n", price); //deprecated
-	return price;
 }
 
 int item_amount(){
@@ -113,6 +110,14 @@ float balance_topup(){
 	return balance_increment;
 }
 
+//v
+float item_cost(item *items, int selection){
+	float price;
+	price = items[selection].price;	
+	//printf("Ihre Erfrischung kostet Sie %.2f EUR.\n", price); //deprecated
+	return price;
+}
+
 void balance_check(float cost){
 	float balance = 0;
 
@@ -126,6 +131,7 @@ void balance_check(float cost){
 	(balance > cost) && (printf("Wechselgeld nicht vergessen.\n"));
 }
 
+//a
 void items_out(int amount){
 	for (int i = 1; i <= amount; i++)
 	{
@@ -133,6 +139,7 @@ void items_out(int amount){
 	}
 }
 
+//^-^//
 void main() {
 	float cost = 0;
 	int amount = 0;
