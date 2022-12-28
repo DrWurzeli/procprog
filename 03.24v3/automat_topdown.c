@@ -114,7 +114,6 @@ float balance_topup(){
 float item_cost(item *items, int selection){
 	float price;
 	price = items[selection].price;	
-	//printf("Ihre Erfrischung kostet Sie %.2f EUR.\n", price); //deprecated
 	return price;
 }
 
