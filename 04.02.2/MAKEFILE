@@ -1,0 +1,2 @@
+test: main.c vergleich.o myfirstheaderfile.h
+	gcc -o test vergleich.o main.c
