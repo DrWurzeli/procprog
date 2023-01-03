@@ -16,7 +16,7 @@ bool prime_check(int j){
         //i alles kleiner x von 2, def prime
         if(j%i == 0) return false;
     }
-    //nicht teilbar und nicht 1
+    //nicht teilbar
     return true;
 }
 
