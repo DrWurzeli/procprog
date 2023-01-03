@@ -1,7 +1,7 @@
 /*
  *
  * Calculate prime numbers (Maximilian Sander)
- * respectfully ripped from
+ * template respectfully ripped from
  * Simon Grischek FOM Cologne KPP DTAG WiSe 2022
  * cfranks ../tmp/03-26/prime.c
  */
