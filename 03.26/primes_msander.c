@@ -9,12 +9,12 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-bool prime_check(int x){
+bool prime_check(int j){
 
-    for(int i=2; i < x; i++){
+    for(int i=2; i < j; i++){
         //teilbarkeit von x durch i
         //i alles kleiner x von 2, def prime
-        if(x%i == 0) return false;
+        if(j%i == 0) return false;
     }
     //nicht teilbar und nicht 1
     return true;
