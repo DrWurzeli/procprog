@@ -1,11 +1,6 @@
+HEADERS = vergleich.h
+
 default: test
 
-vergleich.o: vergleich.c vergleich.h
-gcc -c vergleich.c -o vergleich.o
-
-test: vergleich.o
-gcc vergleich.o -o test.exe
-
-clean:
--rm -f vergleich.o
--rm -f vergleich
+test: vergleich.c main.c
+	gcc main.c vergleich.c -o test.exe
