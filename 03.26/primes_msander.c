@@ -12,8 +12,8 @@
 bool prime_check(int j){
     //oder hochzählen von 2 bis j)
     for(int i=j-1; i > 1; i--){
-        //teilbarkeit von x durch i
-        //i alles kleiner x von 2, def prime
+        //teilbarkeit von j durch i
+        //i alles kleiner j bis 2, def prime
         if(j%i == 0) return false;
     }
     //nicht teilbar
