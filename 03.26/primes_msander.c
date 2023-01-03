@@ -10,8 +10,6 @@
 #include <stdbool.h>
 
 bool prime_check(int x){
-    //randbedingung
-    if(x<=1) return false;
 
     for(int i=2; i < x; i++){
         //teilbarkeit von x durch i
