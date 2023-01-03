@@ -29,7 +29,9 @@ void main(){
     printf("Startwert: %d ", start);
     //vom Start rückwärts, sonst von 2 bis <=n i++
     for(int i=start; i > 1; i--){
+        //primzahlcheck
         if(prime_check(i)) printf("| %d ", i);
     }
+    //obligatorische neue reihe
     printf("\n");
 }
