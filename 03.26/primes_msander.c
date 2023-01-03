@@ -24,11 +24,11 @@ bool prime_check(int x){
 
 void main(){
     //Start
-    int n = 300;
+    int const start = 300;
     //print start
-    printf("Startwert: %d\n", n);
+    printf("Startwert: %d\n", start);
     //vom Start rückwärts, sonst von 2 bis <=n i++
-    for(int i=300; i >= 2; i--){
+    for(int i=start; i >= 2; i--){
         if(prime_check(i)) printf("%d ", i);
     }
     printf("\n");
