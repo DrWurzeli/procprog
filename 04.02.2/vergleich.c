@@ -1,4 +1,4 @@
-#include "myfirstheaderfile.h"
+#include "vergleich.h"
 
 void vergleich(int a, int b){
     if (a > b) printf("Erste Zahl ist groesser.\n");

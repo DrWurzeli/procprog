@@ -1,4 +1,4 @@
-#include "myfirstheaderfile.h"
+#include "vergleich.h"
 
 /*
 Zwei Zahlen einlesen a b, ist a gleich größer oder kleiner als b?
