@@ -6,11 +6,13 @@ und erstelle ein entsprechendes Makefile.*/
 
 #include "circle.h"
 
-void main(){
+int main(){
 
-    int radius = input();
+    int radius = input_int();
 
     printf("Radius: %d\n", radius);
     printf("Umfang: %.2f\n", circumference(radius));
     printf("Flaecheninhalt: %.2f\n", surface(radius));
+
+    return EXIT_SUCCESS;
 }

@@ -1,6 +1,8 @@
 HEADERS = circle.h
+CFLAGS = -Wall -Werror
+NAME = circle
 
-default: circle
+default: $(NAME)
 
-circle: main.c circumference.c surface.c input.c
-	gcc main.c circumference.c surface.c input.c -o circle.exe
+circle: $(HEADERS)
+	gcc $(CFLAGS) *.c -o $(NAME).exe

@@ -1,6 +1,6 @@
 #include "circle.h"
 
-int input(){
+int input_int(){
 
 	int input = -1;
 
@@ -19,5 +19,5 @@ int input(){
             continue;
         }
         else return input;			
-	} while (input = -1);
+	} while ((input = -1));
 }
