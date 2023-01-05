@@ -1,8 +1,8 @@
-HEADERS = circle.h
-CFLAGS = -Wall -Werror
 NAME = circle
+HEADERS = $(NAME).h
+CF = -Wall -Werror
 
 default: $(NAME)
 
 $(NAME): $(HEADERS)
-	gcc $(CFLAGS) *.c -o $(NAME).exe
+	gcc $(CF) *.c -o $(NAME).exe
