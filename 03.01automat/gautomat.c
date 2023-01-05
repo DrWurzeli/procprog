@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-//GetraenkeautomatVersion 0.1 
+//GetraenkeautomatVersion 0.1
+//simplified version of a vending machine. user can input 1 to get a positive output.
 
 int main() {
 
