@@ -1,4 +1,5 @@
 #include <stdio.h>
+//returns a string resembling german grades based on the amount of points reached. valid inputs are the numbers 0 to 10.
 
 int main () {
 
