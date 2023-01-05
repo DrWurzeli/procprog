@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//retuns the smallest number out of three numbers obtained from userinput
 int main() {
 	
 	int a, b, c;
