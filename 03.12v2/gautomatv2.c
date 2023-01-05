@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 //GetraenkeautomatVersion 0.2
-
+//vending machine v0.2 now with three different types of available items. every item can only be purchased using a single coin. valid inputs are 0.5 1 and 2
 int main() {
 
 	int auswahl;
