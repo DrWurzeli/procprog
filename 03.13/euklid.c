@@ -1,4 +1,5 @@
 #include <stdio.h>
+//algorithm of euklid that returns the greatest common divisor of two integers dividing them without a remainder
 
 int main(){
 
