@@ -1,6 +1,7 @@
 #include <stdio.h>
 //F(n)=F(n-1) +F(n-2), non-recursive
-
+//calculates and prints the fibonacci number of a given integer using an iterative approach (not recommended)
+//can also sum up all the numbers.
 int main(){
 
     int n = 0, fib = 0, fibinc = -1, fibex = 1;// fibsum = 0;
