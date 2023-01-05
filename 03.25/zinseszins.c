@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//calculates interest based on given years and starting capital obtained via user input. interest earnings are not cashed out and accumulate.
 void main(){
 
 	int jahre;
