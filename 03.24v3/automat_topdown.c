@@ -1,4 +1,10 @@
-//Getraenkeautomat 2.03.24 looping + func
+/*Getraenkeautomat 2.03.24
+improved implementation of my vending machine.
+call by reference used instead of value
+added loops for the payment process and selection process
+added input validation to prevent missue and the usage of "c" as an input.
+general code cleanup
+*/
 #include <stdio.h>
 #define VERSION "2.03.24"
 #define ITEM_AMOUNT 3
