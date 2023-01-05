@@ -1,4 +1,4 @@
-//taschenrechner
+//sums up two numbers obtained via user input and prints the sum
 
 #include<stdio.h>
 
