@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//shorter version of multiply.c
 float eingabeZahl(){
 	float eingabe;
 	printf("Bitte Zahl eingeben: ");
