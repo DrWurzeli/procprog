@@ -4,6 +4,8 @@
 	ein mehrzeiliger
 	Kommentar
 */
+
+//This program outputs hello world
 #include<stdio.h>
 
 int main() {
