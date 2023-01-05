@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//returns the biggest of 3 numbers obtained via user input. integer only
 int main() {
 	
 	int a, b, c;
