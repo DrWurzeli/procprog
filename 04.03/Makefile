@@ -4,5 +4,5 @@ NAME = circle
 
 default: $(NAME)
 
-circle: $(HEADERS)
+$(NAME): $(HEADERS)
 	gcc $(CFLAGS) *.c -o $(NAME).exe
