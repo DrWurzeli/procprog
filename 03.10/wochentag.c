@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//returns the day of the week as a string based upon user input from 1 to 7 resembling the day of the week.
 int main() {
 
 	int tag;
