@@ -1,6 +1,7 @@
 #include <stdio.h>
 #define NOTEN_ANZAHL 10
-
+//program calculates and prints out the average score of NOTEN_ANZAHL grades.
+//all grades (1 1.0 2 2.0 2.3...) are obtained via user input.
 void main(){
 
     float noten[NOTEN_ANZAHL];
