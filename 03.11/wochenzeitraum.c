@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//returns what half of the week (or weekend) it is, based upon user input from 1-7 resembling the x day of the week
 int main(){
 	
 	int tag;
