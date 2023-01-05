@@ -1,5 +1,6 @@
 #include <stdio.h>
 //calculates and prints out fibonacci number using recursion. initial value for n F(n) is obtained via user input
+//can also print out the entire series of number leading up to the result
 int fibonacci(int fib){
     if (fib == 0){
         return 0;
