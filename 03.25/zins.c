@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+//calculates the interest based on years and starting capital that is obtained via user input
+//interest is cashed out every year in this scenario
 void main(){
 
 	int jahre;
