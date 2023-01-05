@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//returns a school grade from the german school system as a string based on points from 0-10 obtained via user input. this variant is using a switch case.
 int main () {
 
 	int punktzahl;
