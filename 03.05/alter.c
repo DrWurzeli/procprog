@@ -1,4 +1,5 @@
 #include <stdio.h>
+//returns a string based on the user input (in numbers) that resembles the users type of age. valid inputs are 1-infinite positive numbers
 
 int main() {
 
