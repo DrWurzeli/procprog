@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//multiplies two numbers that are obtained via user input and prints out the result
 float eingabeZahl(){
 	float eingabe;
 	printf("Bitte Zahl eingeben: ");
