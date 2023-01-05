@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define ANZAHL 10
-
+//sorts and prints a given array of integers from smallest to biggest number/element. it actually works.
 void arr_print(int *arr){
 
     printf("Array: \n");
