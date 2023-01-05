@@ -1,4 +1,3 @@
-#variables
 NAME = circle
 HEADERS = $(NAME).h
 CF = -Wall -Werror
