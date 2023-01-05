@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//calculates and returns the faculty of a given integer
 int main(){
 
     int fac, i, n;
