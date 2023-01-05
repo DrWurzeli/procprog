@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//returns what part of the week the day, input by the user using a number from 1-7 resembling the day x of the week, is in.
 int main(){
 	
 	int tag;
