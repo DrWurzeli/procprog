@@ -1,4 +1,6 @@
 //Getraenkeautomat func
+//vending machine v.02 where every action has its own function, struct is used for available items for scalability reasons.
+//helper functions are used to avoid duplicate code, also nice startup sequence.
 #include <stdio.h>
 #define VERSION "2.0.4"
 #define ITEM_AMOUNT 3
