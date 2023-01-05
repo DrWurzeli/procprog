@@ -18,6 +18,8 @@ int input_int(){
             input = -1;
             continue;
         }
-        else return input;			
-	} while ((input = -1));
+					
+	} while (input == -1);
+	
+	return input;
 }
