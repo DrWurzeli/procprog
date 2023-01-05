@@ -1,4 +1,5 @@
 //Benzinverbrauch
+//calculates the fuel used per 100 kilometers based on given fuel consumption and kilometers driven
 
 #include<stdio.h>
 
