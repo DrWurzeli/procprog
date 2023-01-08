@@ -1,3 +1,4 @@
+//this function captures a user input, validates it and then return the value.
 #include "circle.h"
 
 float input_float(){
