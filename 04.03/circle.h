@@ -2,6 +2,6 @@
 #include<stdlib.h>
 #define PI 3.141592
 
-int input_int();
-float circumference(int radius);
-float surface(int radius);
+float input_float();
+float circumference(float radius);
+float surface(float radius);

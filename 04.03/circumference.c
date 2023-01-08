@@ -1,5 +1,5 @@
 #include "circle.h"
 
-float circumference(int radius){
+float circumference(float radius){
     return PI * radius * 2;
 }

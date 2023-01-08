@@ -1,13 +1,13 @@
 #include "circle.h"
 
-int input_int(){
+float input_float(){
 
-	int input = -1;
+	float input = -1;
 
 	do {
 		printf("Bitte Radius eingeben: ");
 
-		if(scanf("%d", &input) != 1){
+		if(scanf("%f", &input) != 1){
 			scanf("%*[^\n]");
 			printf("Invalide Eingabe.\n");
 			input = -1;

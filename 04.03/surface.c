@@ -1,5 +1,5 @@
 #include "circle.h"
 
-float surface(int radius){
+float surface(float radius){
     return PI * radius * radius;
 }

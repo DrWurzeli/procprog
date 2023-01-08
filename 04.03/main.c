@@ -8,11 +8,11 @@ und erstelle ein entsprechendes Makefile.*/
 
 int main(){
 
-    int radius = input_int();
+    float radius = input_float();
 
-    printf("Radius: %d\n", radius);
-    printf("Umfang: %.2f\n", circumference(radius));
-    printf("Flaecheninhalt: %.2f\n", surface(radius));
+    printf("Radius: %.2f E\n", radius);
+    printf("Umfang: %.2f E\n", circumference(radius));
+    printf("Flaecheninhalt: %.2f FE\n", surface(radius));
 
     return EXIT_SUCCESS;
 }
