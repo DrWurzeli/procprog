@@ -18,11 +18,13 @@ int fibonacci(int fib){
 }
 
 void fib_ausgabe(int n){
-    printf("\nF(%d) ist: %d\n", n, fibonacci(n));
+    printf("F(%d) ist: %d\n", n, fibonacci(n));
 
     for(int i=0; i<n; i++){
         printf("%d ", fibonacci(i));
     }
+
+    printf("\n");
 
     for(int j=n-1; j >=0; j--){
         printf("%d ", fibonacci(j));
