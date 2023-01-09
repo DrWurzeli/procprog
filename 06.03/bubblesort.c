@@ -10,7 +10,7 @@ void arr_print(int *arr){
     printf("\n");
 }
 
-int arr_bubblesort(int *arr){
+void arr_bubblesort(int *arr){
 
     for(int i = 1; i < ANZAHL; i++){
         for(int j = 0; j < ANZAHL-i; j++){
