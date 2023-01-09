@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "fibrec.h"
 //calculates and prints out fibonacci number using recursion. initial value for n F(n) is obtained via user input
 //can also print out the entire series of number leading up to the result
 int fibonacci(int fib){
@@ -13,24 +13,16 @@ int fibonacci(int fib){
     }
 }
 
-int zahl_eingabe(){
-    int in;
-    printf("Bitte eine Zahl eingeben: ");
-    scanf("%d", &in);
-    return in;
-}
-
 void fib_ausgabe(int n){
-    /* Folge
+    /*Folge
     for(int i=0; i<n; i++){
         printf("%d ", fibonacci(i));
-    }
-    */
+    }*/
     printf("F(%d) ist: %d", n, fibonacci(n));
 }
 
-
-void main(){
-    int n = zahl_eingabe();
+int main(){
+    int n = input_int();
     fib_ausgabe(n);
+    return 0;
 }
