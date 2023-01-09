@@ -1,6 +1,10 @@
 #include "fibrec.h"
-//calculates and prints out fibonacci number using recursion. initial value for n F(n) is obtained via user input
-//can also print out the entire series of number leading up to the result
+/*
+calculates and prints out fibonacci number using recursion.
+initial value for n F(n) is obtained via user input
+can also print out the entire series of number leading up to the result
+and reverse the entire series as well
+*/
 int fibonacci(int fib){
     if (fib == 0){
         return 0;
@@ -14,11 +18,15 @@ int fibonacci(int fib){
 }
 
 void fib_ausgabe(int n){
-    /*Folge
     for(int i=0; i<n; i++){
         printf("%d ", fibonacci(i));
-    }*/
-    printf("F(%d) ist: %d", n, fibonacci(n));
+    }
+    
+    printf("\nF(%d) ist: %d\n", n, fibonacci(n));
+
+    for(int j=n-1; j >=0; j--){
+        printf("%d ", fibonacci(j));
+    }
 }
 
 int main(){
