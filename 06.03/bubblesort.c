@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define ANZAHL 10
+#define ANZAHL 20
 //sorts and prints a given array of integers from smallest to biggest number/element. it actually works.
 void arr_print(int *arr){
 
@@ -26,7 +26,7 @@ int arr_bubblesort(int *arr){
 
 void main(){
 
-    int zahlen_arr[ANZAHL] = {-150, -233, 4748, -305, -1, 2808, -3574, 431, -23, 0};
+    int zahlen_arr[ANZAHL] = {-150, -233, 4748, -305, -1, 2808, -3574, 431, -23, 0, 1, 2, 90, -567, 23748, -724, 75, 46, -12345, 777};
 
     arr_print(zahlen_arr);
     arr_bubblesort(zahlen_arr);
