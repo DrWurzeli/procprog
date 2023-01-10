@@ -5,14 +5,16 @@ calculates primes by elimination
 from a given array of numbers, starts at 2
 */
 void main(){
-    int const start = 298;
+    int const start = 299;
     int sieb[start];
     //printf("Startwert: %d ", start);
 
     for(int i=0; i < start; i++){
         sieb[i] = i+2;
-        //printf("%d", sieb[i]);
+        //printf("%d ", sieb[i]);
     }
+
+    printf("\nBerechne Primzahlen von 2 bis 300...\n");
 
     for(int j=0; j<start; j++){
         if(sieb[j] != 0){
