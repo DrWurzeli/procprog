@@ -5,7 +5,7 @@ calculates primes by elimination
 from a given array of numbers, starts at 2
 */
 void main(){
-    int const start = 299;
+    int const start = 300;
     int sieb[start];
     //printf("Startwert: %d ", start);
 
