@@ -3,9 +3,10 @@
 sieve of Eratosthanes
 calculates primes by elimination
 from a given array of numbers, starts at 2
+ends add (arrysize)+2
 */
 void main(){
-    int const start = 300;
+    int const start = 298;
     int sieb[start];
     //printf("Startwert: %d ", start);
 
@@ -14,7 +15,7 @@ void main(){
         //printf("%d ", sieb[i]);
     }
 
-    printf("\nBerechne Primzahlen von 2 bis 300...\n");
+    printf("\nBerechne Primzahlen von 2 bis %d...\n", start+2);
 
     for(int j=0; j<start; j++){
         if(sieb[j] != 0){
