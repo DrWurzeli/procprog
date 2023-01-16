@@ -18,7 +18,11 @@ int main(){
             fill[j] = '_';
         }
 
-        printf("%s%s%s\n", vorname[i], fill, nachname[i]);
+        char ausgabe[81];
+        strcpy(ausgabe, vorname[i]);
+        strcat(ausgabe, fill);
+        strcat(ausgabe, nachname[i]);
+        printf("%s\n", ausgabe);
 
     }
 
