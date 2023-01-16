@@ -20,12 +20,10 @@ int main(){
     printf("Name\tGramm\tnetto\tbrutto\n");
 
     for(int i=0; i<5; i++){
+        
         float kP = kPreis(ppreis[i], pgroesse[i]);
 
-        printf("%s\t", pname[i]);
-        printf("%d\t", pgroesse[i]);
-        printf("%.2f\t", kP);
-        printf("%.2f\t", kP*1.07);
+        printf("%s\t%d\t%.2f\t%.2f", pname[i], pgroesse[i], kP, kP*1.07);
         printf("\n");
     }
 
