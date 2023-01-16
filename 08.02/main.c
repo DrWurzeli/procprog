@@ -1,5 +1,8 @@
 #include "main.h"
-
+/*
+Erstelle ein Array aus "Strings" mit den Wochentagen. Der Nutzer gibt eine Zahl ein
+und das Programm gibt den passenden Wochentag aus.
+*/
 int main(){
 
     int input = get_int();
