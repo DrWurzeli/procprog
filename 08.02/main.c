@@ -4,7 +4,8 @@ int main(){
 
     int input = get_int();
 
-    char* wochentage[7];
+    char* wochentage[7] = {"Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"};
+    /*char* wochentage[7];
     wochentage[0] = "Montag";
     wochentage[1] = "Dienstag";
     wochentage[2] = "Mittwoch";
@@ -12,7 +13,7 @@ int main(){
     wochentage[4] = "Freitag";
     wochentage[5] = "Samstag";
     wochentage[6] = "Sonntag";
-
+    */
     printf("Der %dte Wochentag ist: %s", input, wochentage[input-1]);
 
     printf("\n");
