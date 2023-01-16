@@ -1,7 +1,8 @@
 /*
 Initialisiere ein paar Arrays mit Produktname, Packungsgröße in Gramm und Preis in Euro.
-Gib eine Liste mit diesen Werten aus:
+Gib eine Liste der Produkte mit diesen Werten aus:
 Produktname, Packungsgröße, Kilopreis netto, Kilopreis brutto, in Euro. 7% USt
+Kilopreis wird in einer eigenen Funktion berechnet.
 */
 #include "main.h"
 
@@ -19,10 +20,12 @@ int main(){
     printf("Name\tGramm\tnetto\tbrutto\n");
 
     for(int i=0; i<5; i++){
+        float kP = kPreis(ppreis[i], pgroesse[i]);
+
         printf("%s\t", pname[i]);
         printf("%d\t", pgroesse[i]);
-        printf("%.2f\t", kPreis(ppreis[i], pgroesse[i]));
-        printf("%.2f\t", kPreis(ppreis[i], pgroesse[i])*1.07);
+        printf("%.2f\t", kP);
+        printf("%.2f\t", kP*1.07);
         printf("\n");
     }
 
