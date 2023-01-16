@@ -10,11 +10,10 @@ int main(){
 
         laenge1 = strlen(vorname[i]);
         laenge2 = strlen(nachname[i]);
-        space = 80-laenge1-laenge2;
-        
-        char fill[space];
+        space = 79-laenge1-laenge2;
 
-        for(int j=0; j<space; j++){
+        char fill[space];
+        for(int j=0; j<=space; j++){
             fill[j] = '_';
         }
 
