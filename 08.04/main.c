@@ -11,10 +11,10 @@ int main(){
     char string[] = "C:\\Eigene Dateien\\FOM\\C-Code\\main.c";
 
     char *p = strrchr(string, '.')+1;
-    printf("Dateiendung: %s\n", strstr(string, p));
+    printf("Dateiendung: %s\n", p);
 
     p = strrchr(string, '\\')+1;
-    printf("Dateiname: %s\n", strstr(string, p));
+    printf("Dateiname: %s\n", p);
 
     p -= 1;
     *p = '\0';
