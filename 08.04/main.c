@@ -1,6 +1,6 @@
 #include "main.h"
 /*
-program takes a path as an input and then outputs the file type
+program takes a path as an input and then outputs the file type,
 file name including file type and the path leadinf to said file.
 a pointer is used to find elements in the string and then set to
 \0 to cut the filename and format from the input string.
