@@ -1,2 +1,2 @@
 # procprog
-procedural programming course at FOM-Cologne university of applied science using C
+procedural programming course at FOM University of Applied Sciences for Economics and Management using C
