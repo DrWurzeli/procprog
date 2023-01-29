@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//calculates biggest common divisor using iterative and recursive approaches.
 int ggt_it(int x, int y){
     while(x != y){
         if(x > y) x = x-y;
