@@ -17,13 +17,13 @@ int main(){
     float ppreis[5] = {2.50, 1.90, 0.85, 7.50, 1.05};
 
     printf("\nPreise in EUR/Kilogramm.\n");
-    printf("Name\tGramm\tnetto\tbrutto\n");
+    printf("Name\tGramm\tbrutto\tnetto\n");
 
     for(int i=0; i<5; i++){
         
         float kP = kPreis(ppreis[i], pgroesse[i]);
 
-        printf("%s\t%d\t%.2f\t%.2f", pname[i], pgroesse[i], kP, kP*1.07);
+        printf("%s\t%d\t%.2f\t%.2f", pname[i], pgroesse[i], kP, kP/1.07);
         printf("\n");
     }
 
