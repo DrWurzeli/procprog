@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//calculating faculty and fibonacci numbers using iterative and recursive approaches.
 int fac_it(int in){
     int fac = in;
 
