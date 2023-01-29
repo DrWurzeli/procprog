@@ -44,4 +44,6 @@ int main(){
     printf("Faculty: %d\n", fac_rec(input));
     printf("Fibonacci: %d\n", fib_it(input));
     printf("Fibonacci: %d\n", fib_rec(input));
+
+    return 0;
 }
